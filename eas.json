@@ -1,0 +1,36 @@
+{
+  "cli": {
+    "version": ">= 3.3.2",
+    "requireCommit": true
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "simulator": true,
+        "resourceClass": "m-medium"
+      },
+      "env": {
+        "APP_NAME": "Test App (Dev)"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "resourceClass": "m-medium"
+      },
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "APP_NAME": "Test App (Preview)"
+      }
+    },
+    "production": {
+      "env": {
+        "APP_NAME": "Test App"
+      }
+    }
+  }
+}
